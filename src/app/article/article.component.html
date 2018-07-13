@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-12 col-md-3 col-lg-3">
+    <div class="points">
+      <h1>{{ article.votes }}</h1>
+      <h4 class="text-uppercase">Points</h4>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-9 col-lg-9">
+    <div>
+      <h1>{{ article.title }}</h1>
+      <p>({{ article.domain() }})</p>
+    </div>
+    <div class="">
+      <button
+        (click)="article.voteUp()"
+        type="button" class="btn btn-link">
+        <i class="fa fa-arrow-up"></i> UpVote
+      </button>
+      <button (click)="article.voteDown()" type="button" class="btn btn-link">
+        <i class="fa fa-arrow-down"></i> DownVote
+      </button>
+    </div>
+  </div>
+</div>
+<br>
